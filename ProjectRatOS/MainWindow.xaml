@@ -1,0 +1,73 @@
+﻿<Window x:Class="ProjectRatOS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectRatOS"
+        mc:Ignorable="d"
+        Title="RatOS" MinHeight="420" MaxHeight="420" MinWidth="200" MaxWidth="200"
+        WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" MouseLeftButtonDown="DragMe" Width="175">
+
+    <Border x:Name="BorPic" Background="Beige" CornerRadius="50" BorderBrush="Green" BorderThickness="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0,0,0,0">
+        <Grid Margin="1,1,-11,-1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="213*"/>
+                <RowDefinition Height="205*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="LoadMusic" Content="Загрузить музыку" HorizontalAlignment="Center" Margin="0,169,0,0" VerticalAlignment="Top" Height="30" Width="114" Click="LoadMusic_Click" Grid.Row="1">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border CornerRadius="20" Background="LightGray" BorderBrush="Black" BorderThickness="1">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button x:Name="exitBtn" Width="47" Height="22" HorizontalAlignment="Left" VerticalAlignment="Top" Click="exitBtn_Click" Margin="111,2,0,0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border CornerRadius="6" BorderBrush="Black" Background="Red" BorderThickness="1">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Label Content="RatosMusic" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Background="{x:Null}" Height="24" Margin="34,0,0,0" />
+            <ComboBox x:Name="chooseMusic" HorizontalAlignment="Left" Margin="4,142,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188" SelectionChanged="chooseMusic_SelectionChanged"/>
+            <Label x:Name="MusicCount"  Content="Label" HorizontalAlignment="Left" Margin="4,177,0,0" VerticalAlignment="Top" Width="188"/>
+            <Slider x:Name="volumeSlider" HorizontalAlignment="Left" Margin="-42,65,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5" ValueChanged="volumeSlider_ValueChanged">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-91.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Button x:Name="playBtn"  Content="Play" HorizontalAlignment="Left" Margin="124,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="69" Width="68" Click="playBtn_Click"/>
+            <Button x:Name="pauseBtn" Content="Pause" HorizontalAlignment="Left" Margin="79,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="40" Click="pauseBtn_Click"/>
+            <Button x:Name="StopBtn" Content="Stop" HorizontalAlignment="Left" Margin="79,50,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="40" Click="StopBtn_Click"/>
+            <Image Source="RatosMusic.png" HorizontalAlignment="Left" Height="139" Margin="34,41,0,0" VerticalAlignment="Top" Width="130"/>
+            <Label x:Name="lblStatus" HorizontalAlignment="Left" Margin="79,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="113" Height="26"/>
+
+
+
+        </Grid>
+    </Border>
+
+</Window>
