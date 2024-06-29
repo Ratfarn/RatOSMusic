@@ -60,8 +60,7 @@
                 </Slider.RenderTransform>
             </Slider>
             <Button x:Name="playBtn"  Content="Play" HorizontalAlignment="Left" Margin="124,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="69" Width="68" Click="playBtn_Click"/>
-            <Button x:Name="pauseBtn" Content="Pause" HorizontalAlignment="Left" Margin="79,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="40" Click="pauseBtn_Click"/>
-            <Button x:Name="StopBtn" Content="Stop" HorizontalAlignment="Left" Margin="79,50,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="40" Click="StopBtn_Click"/>
+            <Button x:Name="StopBtn" Content="Stop" HorizontalAlignment="Left" Margin="79,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="40" Click="StopBtn_Click"/>
             <Image Source="RatosMusic.png" HorizontalAlignment="Left" Height="139" Margin="34,41,0,0" VerticalAlignment="Top" Width="130"/>
             <Label x:Name="lblStatus" HorizontalAlignment="Left" Margin="79,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="113" Height="26"/>
 

@@ -20,6 +20,7 @@ namespace ProjectRatOS
         static DirectoryInfo dirExist = new DirectoryInfo($"{curDir}\\MusicFolder");
         MediaPlayer playMusic = new MediaPlayer();
         MediaPlayer closePlay = new MediaPlayer();
+        bool isPlay = false;
 
         public MainWindow()
         {
@@ -101,12 +102,19 @@ namespace ProjectRatOS
 
         private void playBtn_Click(object sender, RoutedEventArgs e)
         {
-            playMusic.Play();
-        }
-
-        private void pauseBtn_Click(object sender, RoutedEventArgs e)
-        {
-            playMusic.Pause();
+            if (isPlay == false)
+            {
+                playBtn.Content = "Play";
+                playMusic.Play();
+                isPlay = true;
+            }
+            else
+            {
+                playBtn.Content = "Pause";
+                playMusic.Pause();
+                isPlay = false;
+            }
+            
         }
 
         private void StopBtn_Click(object sender, RoutedEventArgs e)
